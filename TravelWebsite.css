@@ -1,0 +1,764 @@
+
+/* ==================
+      global styles
+   ==================    */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Playfair Display SC', serif;
+    max-width: 100vw;
+}
+
+/* ===============
+  navigation styles
+   ===============
+*/
+
+.mainmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.mainmenu ul {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+}
+
+.mainmenu ul li {
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-right: 1.2em;
+    font-size: 1.5rem;
+}
+
+.mainmenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.mainmenu ul li a:hover {
+    color: rgb(47, 170, 170);
+}
+
+.mainmenu ul li a:active {
+    color: rgb(84, 190, 190);
+}
+
+.navbutton {
+    position: absolute;
+    margin: 1em;
+    width: 48px;
+    height: 24px;
+    left: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0.2em;
+    visibility: hidden;
+}
+
+.hamburger {
+    background-color: rgb(49, 221, 221);
+    width: 31px;
+    height: 18px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    border-radius: 5px;
+}
+
+.mainmenu.scrolled {
+    background-color: rgba(189, 189, 189, 0.486);
+    padding-bottom: 0.5em;
+    box-shadow: 4px 4px 4px rgba(34, 33, 33, 0.4);
+
+}
+.mainlink.scrolled {
+    color:white;
+}
+
+/* =================
+      <main> styles
+   =================
+*/
+
+body {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, #mainpage {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./LargeImages/s-migaj-Yui5vfKHuzs-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+img {
+    width: 360px;
+    height: 240px;
+    border: 1px solid white;
+    border-radius: 21%;
+}
+
+#mainpage {
+    height: 100vh;
+    padding-bottom: 1em;
+}
+
+.maincontainer {
+    position: absolute;
+    text-align: center;
+    top: 24%;
+    transform: translate(0,40%);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.mainbutton {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+.mainbutton a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    padding: 0.1em;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainbutton a:hover {
+    background-color: white;
+    color: rgb(61, 202, 202);
+}
+
+h1 {
+    padding: 0.2em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#tours {
+    background-image: linear-gradient(rgba(95, 32, 100, 0.63), rgba(179, 166, 166, 0.63));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: white; 
+    padding-top: 70px;
+}
+
+.slide {
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1em;
+    padding-top: 4em;
+}
+
+.toursstyles p {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toursstyles p.slide-in {
+    transform: translateX(0);
+}
+
+/* smooth transtion of pictures and p's */
+
+.toursstyles img {
+    transform: translateX(-50%);
+}
+
+.toursstyles p {
+    transform: translateX(50%);
+}
+
+.toursstyles img, .toursstyles p {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+
+.toursstyles img.slide-in, 
+.toursstyles p.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.seemore {
+    padding: 1em;
+}
+
+.morebutton {
+    padding: 0.5em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    left: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translate(-50%);
+}
+
+#advice {
+    padding-top: 70px;
+    background-image: linear-gradient(rgba(4, 117, 112, 0.3), rgba(104, 98, 98, 0.4));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 1em;
+    color: white;
+}
+
+#advice p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.advicestyles {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-self: center;
+    gap: 1em;
+    text-align: center;
+}
+
+
+#advice figcaption {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.takewithyou {
+    position: relative;
+    left: 50%;
+    text-align: center;
+}
+
+#about {
+    height: 85vh;
+    background-image: linear-gradient(rgba(69, 172, 10, 0.4), rgba(148, 144, 144, 0.3));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: white; 
+    font-size: 1.2rem;
+    padding: 0.5em;
+    padding-top: 70px;
+}
+
+#about h2 {
+    padding-bottom: 0.5em;
+}
+
+#about img {
+    width: 31px;
+    height: 28px;
+    border: 0;
+    padding: 0.2em;
+}
+
+.aboutcontainer {
+    display: flex; 
+    justify-content: space-evenly; 
+    padding-top: 1em;
+    gap: 0.5em; 
+    text-align: center;
+}
+
+.aboutcontainer li {
+    display: flex;
+    align-items: center;
+    list-style-type: none; 
+    transition: transform, 0.1s;  
+}
+
+.aboutcontainer li:hover {
+    transform: translateY(5px);
+}
+
+footer {
+    background-color: rgba(75, 72, 72, 0.192);
+    padding: 0.8em;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    height: 2vh;
+}
+
+/* =================
+   for latest IE
+   =================  */
+@media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+    .takewithyou {
+        position: relative;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .toursstyles {
+        display: block;
+    }
+
+    .toursstyles p {
+        -ms-transform: translateX(0);
+        opacity: 1;
+        text-align: center;
+    }
+    .toursstyles img {
+        position: relative;
+        opacity: 1;
+        -ms-transform: translateX(100%);
+    } 
+}
+
+/* ==================
+    responsive part
+   ===================
+ */
+
+@media screen and (min-width:2560px) {
+    .maincontainer {
+        font-size: 4rem;
+    }
+
+    .mainbutton a {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    #tours, #advice {
+        padding-top: 160px;
+    }
+
+    .mainmenu ul li a {
+        font-size: 4rem;
+    }
+
+    .morebutton {
+        font-size: 4rem;
+    }
+    .toursstyles img {
+        width: 790px;
+        height: auto;
+    }
+
+    .toursstyles p {
+        font-size: 4rem;
+    }
+
+    #advice img {
+        width: 790px;
+        height: auto;
+    }
+
+    #advice figcaption, #advice p {
+        font-size: 4rem;
+    }
+
+    #about {
+        font-size: 3rem;
+        padding-top: 160px;
+    }
+
+    .aboutcontainer {
+        display: block;
+        font-size: 3rem;
+    }
+
+    img {
+        width: 760px;
+        height: 590px;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media scree and (max-width: 1440px) {
+    .maincontainer {
+        font-size: 2rem;
+    }
+
+    .mainbutton a {
+        font-size: 2rem;
+    }
+
+    .mainmenu a {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .toursstyles p {
+        font-size: 2rem;
+    }
+
+    .toursstyles img {
+        width: 460px;
+        height: auto;
+    }
+
+    .morebutton {
+        font-size: 2rem;
+    }
+
+    #advice {
+        padding-bottom: 2em;
+    }
+
+    #advice p, #advice figcaption {
+        font-size: 2rem;
+    }
+
+    #about {
+        font-size: 2rem;
+    }
+
+    #advice img {
+        width: 460px;
+        height: auto;
+    }
+    
+    .aboutcontainer {
+        display: block;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+    
+}
+
+
+@media screen and (max-width:1024px) {
+    #mainpage {
+        font-size: 1.2rem;
+    }
+
+    .aboutcontainer{
+        display: block;
+    }
+
+    footer {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .maincontainer {
+        font-size: 1.2rem;
+    }
+   .mainmenu ul li a {
+       font-size: 1.2rem;
+   }
+   
+    .toursstyles {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #tours h2 {
+        padding-bottom: 0;
+    }
+
+    .toursstyles .slide {
+        padding-top: 1.4em;
+        padding-bottom: 1.6em;
+    }
+
+
+    .toursstyles img {
+        width: 320px;
+        height: auto;
+    }
+
+    .toursstyles p {
+        font-size: 1.2rem;
+        padding-right: 0.4em;
+    }
+
+    .advicestyles {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .advicestyles img {
+        width: 360px;
+        height: auto;
+    }
+
+    .takewithyou {
+        left: 0;
+    }
+
+    .aboutcontainer {
+        display: block;
+    }
+
+    #about img {
+        width: 24px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .navbutton {
+        position: absolute;
+        visibility: visible;
+        z-index: 999;
+    }
+
+    header {
+        position: relative;
+    }
+
+    #mainpage {
+        font-size: 0.799rem;
+    }
+
+    .mainmenu {
+        position: absolute;
+        background-color: rgb(171, 223, 223);
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    .mainmenu.toggle {
+        visibility: visible;
+    }
+
+    .mainmenu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .mainmenu ul li {
+        border-bottom: 1px solid white;
+        margin-top: 1em;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .mainmenu ul li a {
+        color: rgb(255, 255, 255);
+    }
+
+    .toursstyles p {
+        font-size: 1.2rem;
+    }
+
+    .toursstyles img {
+        width: 311px;
+        height: auto;
+    }
+
+    #tours, #advice {
+        padding-top: 1em;
+    }
+    #about {
+        padding-top: 1em;
+        font-size: 1rem;
+    }
+
+    #about img {
+        width: 21px;
+        height: 16px;
+    }
+
+    .aboutcontainer {
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    .navbutton {
+        left: 92%;
+    }  
+
+}
+
+@media screen and (max-width:541px) {
+
+    .maincontainer {
+        font-size: 0.879rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    .navbutton {
+        width: 24px;
+        left: 84%;
+    }
+
+    .mainmenu ul li {
+        font-size: 1.2rem;
+    }
+
+   #tours, #advice {
+       padding-top: 1em;
+       font-size: 0.7rem;
+   }
+
+   #advice p {
+       font-size: 0.879rem;
+   }
+
+   #advice figcaption {
+       font-size: 0.879rem;
+   }
+
+   .slide {
+       display: block;
+       text-align: center;
+       padding: 1em;
+   }
+
+   .slide p {
+       font-size: 0.8rem;
+       width: 100%;
+       text-align: center;
+   }
+
+   .advicestyles img {
+       width:  260px;
+       height: auto;
+   }
+
+   .morebutton{
+       font-size: 0.779rem;
+   }
+
+   .toursstyles p {
+       font-size: 0.879rem;
+   }
+
+   .toursstyles img {
+       width: 251px;
+       height: auto;
+   }
+   #advice img {
+    width: 260px;
+    height: auto;
+}
+
+
+   #about {
+       padding-top: 1em;
+       font-size: 0.8rem;
+       height: 89vh;
+   }
+
+   #about p {
+       font-size: 0.989rem;
+   }
+
+   footer {
+       font-size: 0.6rem;
+       height: 2vh;
+   }
+   
+}
+
+@media screen and (max-width:370px) {
+    .maincontainer {
+        font-size: 0.845rem;
+    }
+    .navbutton {
+        width: 24px;
+        left: 81%;
+    }
+    #tours, #advice {
+        padding-top: 1em;
+        font-size: 0.4rem;
+    }  
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    #advice p, #advice figcaption {
+        font-size: 0.879rem;
+    }
+
+    #advice img {
+        width: 260px;
+        height: auto;
+    }
+    
+    .slide {
+        display: block;
+        text-align: center;
+    }
+
+    .slide p {
+        font-size: 0.8rem;
+    }
+
+   #about {
+       height: 87vh;
+       padding-top: 1em;
+       padding-bottom: 1.5em;
+       font-size: 0.879rem;
+   }
+
+   .aboutcontainer {
+       font-size: 0.7rem;
+   }
+
+   footer {
+       font-size: 0.675rem;
+   }
+ }
+
+
