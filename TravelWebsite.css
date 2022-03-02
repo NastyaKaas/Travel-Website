@@ -104,7 +104,7 @@ p {
 }
 
 header, #mainpage {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://nastyakaas.github.io/Travel-Website/s-migaj-Yui5vfKHuzs-unsplash.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../s-migaj-Yui5vfKHuzs-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
